@@ -7,7 +7,20 @@
     "lint": "eslint src",
     "precommit": "lint-staged && yarn test",
     "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
-    "test": "jest"
+    "test:unit": "jest",
+    "test": "yarn lint && yarn flow && jest"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/?(*.)test.js?(x)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ]
   },
   "lint-staged": {
     "*.js": [
@@ -22,20 +35,23 @@
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "babel-jest": "23.4.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "flow-bin": "^0.67.1",
     "husky": "^0.14.3",
     "jest": "23.4.1",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7",
+    "react-dom": "^16.4.1",
     "react-test-renderer": "16.3.1"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }
