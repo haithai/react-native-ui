@@ -1,11 +1,14 @@
+// index.android.js - place code in here fore Android flatform !!!
+
 // Import a lib to help create a component.
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import Header from './src/components/header';
+import { Text, AppRegistry } from 'react-native';
 
 // Create a component.
 const App = () => (
-  <Header headerText="Albums" />
+  <Text>
+    Some Text
+  </Text>
 );
 
 // Render it to the deivce.

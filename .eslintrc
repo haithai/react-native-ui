@@ -11,6 +11,7 @@
     "react/jsx-filename-extension": [
       1, { "extensions": [".js", ".jsx"] }
     ],
+    "react/jsx-one-expression-per-line": 1,
     "react/prefer-stateless-function": [
       1, { "ignorePureComponents": true }
     ],
@@ -24,7 +25,8 @@
         "peerDependencies": false
       }
     ],
-    "semi": ["error", "never"]
+    "semi": ["error", "always"],
+    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }]
   },
   "env": {
     "jest": true
