@@ -11,7 +11,7 @@
     "react/jsx-filename-extension": [
       1, { "extensions": [".js", ".jsx"] }
     ],
-    "react/jsx-one-expression-per-line": 1,
+    "react/jsx-one-expression-per-line": 0,
     "react/prefer-stateless-function": [
       1, { "ignorePureComponents": true }
     ],
@@ -25,7 +25,13 @@
         "peerDependencies": false
       }
     ],
-    "semi": ["error", "always"],
+    "semi": "off",
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "object-curly-newline" : "off",
+    "react/prop-types": "off",
+    "arrow-body-style": "off",
+    "react/destructuring-assignment": "off",
     "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }]
   },
   "env": {
