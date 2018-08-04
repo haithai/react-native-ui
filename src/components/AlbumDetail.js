@@ -1,10 +1,10 @@
-import React from 'react';
-import { Text, View, Image } from 'react-native';
-import Card from './Card';
-import CardSelection from './CardSelection';
+import React from 'react'
+import { Text, View, Image } from 'react-native'
+import Card from './Card'
+import CardSelection from './CardSelection'
 
 const AlbumDetail = ({ album }) => {
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image } = album
   return (
     <Card>
       <CardSelection>
@@ -20,8 +20,8 @@ const AlbumDetail = ({ album }) => {
         <Image style={styles.imageStyle} source={{ uri: image }} />
       </CardSelection>
     </Card>
-  );
-};
+  )
+}
 
 const styles = {
   headerContentStyle: {
@@ -45,6 +45,6 @@ const styles = {
     height: 300,
     flex: 1,
   },
-};
+}
 
-export default AlbumDetail;
+export default AlbumDetail
